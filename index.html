@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Akshit Raizada's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.work-item p {font-size:0.95rem;}
+			.header-sub {font-weight:600; font-size:1rem; opacity:0.9;}
+			.section-title {margin-bottom:0.75rem}
+			.tag {display:inline-block;padding:4px 8px;border-radius:12px;background:#eef; margin:2px;font-size:0.85rem}
+			.role img.logo {height:24px; vertical-align:middle; margin-right:8px;}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+				<h1><strong>Akshit Raizada's Portfolio</strong></h1>
+				<h3><strong>Pursuing MS in Robotic Systems Development at Carnegie Mellon University</strong></h3>
+			</div>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+			<section id="about">
+  <h2>About Me</h2>
+  <p>I'm Akshit Raizada, currently pursuing my Master's in Robotic Systems Development at Carnegie Mellon University. I completed my B.Tech in Mechanical Engineering at IIT Indore, where I developed a strong foundation in robotics, automation, and AI.
+</p>
+<p>Over the past few years, I've worked on projects spanning autonomous vehicles, multi-robot systems, computer vision and off-road navigation. I enjoy bridging research with real-world deployment, from perception stacks and sensor fusion pipelines to autonomous control and hardware integration.
+</p>
+<p>I'm always excited to connect with people whether it's for collaboration, research or just sharing ideas.
+ </p> 
+  <ul class="actions">
+    <li>
+      <a href="https://drive.google.com/file/d/YOUR_RESUME_ID/view?usp=sharing" 
+         target="_blank" 
+         class="button">
+        View Resume
+      </a>
+    </li>
+  </ul>
+</section>
+
+			<!-- Projects -->
+			<section id="projects">
+				<h2>Projects</h2>
+				<div class="row">
+
+					<!-- IISc -->
+					<article class="col-12 work-item">
+						<a href="projects/iisc/index.html" class="image fit thumb">
+							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/IRisPath_Preview.mp4" type="video/mp4">
+							</video>
+						</a>
+						<h3>Artificial Intelligence & Robotics Lab, IISc (Research Intern)</h3>
+						<p>Designed self-supervised off-road costmap generation (RGB, IR, velocity fusion). Released dataset; engineered deployable perception stack benchmarked vs. SOTA semantic segmentation with domain adaptation.</p>
+					</article>
+					
+					<!-- AutoMind -->
+					<article class="col-12 work-item">
+						<a href="projects/automind/index.html" class="image fit thumb">
+							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/out-3.mp4" type="video/mp4">
+							</video>
+						</a>
+						<h3>AutoMind Dynamics (Project Intern)</h3>
+						<p>Devised & deployed modular Bird’s Eye View framework (LiDAR-camera-radar fusion) for real-time 3D object detection on constrained hardware. Delivered Dockerized, production-ready code integrated with BEL’s robotics stack.</p>
+					</article>
+
+					<!-- ALPR -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/alpr/index.html" class="image fit thumb">
+							<img src="images/CO2.png" alt="IRisPath Project Preview" />
+						</a>
+						<h3>CO₂ Monitoring & ALPR</h3>
+						<p>Developed an ALPR system using YOLOv9 and Tesseract OCR trained on a custom Indian license plate dataset, deployed on Raspberry Pi for accurate edge inference, earning the Chanakya UG Fellowship Grant 2023. Designed a through-beam IR-based CO₂ sensor and integrated cloud logging to flag violators based on emissions
+						</p>
+					</article>
+
+					<!-- Formation Control -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/formation/index.html" class="image fit thumb">
+							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/Drona_preview.mp4" type="video/mp4">
+							</video>
+						</a>
+						<h3>Formation Control of MAVs</h3>
+						<p>Developed a multi-threaded Python API for controlling multiple MAVs and created a robust PID-controlled multi-agent waypoint navigation algorithm with visual position feedback from ArUco markers. We were awarded the bronze medal at the Inter IIT Tech Meet 11.0 at IIT Kanpur for this project.</p>
+					</article>
+
+					<!-- Greenhouse -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/greenhouse/index.html" class="image fit thumb">
+							<img src="videos/simulation.gif" alt="Greenhouse Robot Simulation" />
+						</a>
+						<h3>Greenhouse Harvesting Robot</h3>
+						<p>LiDAR UGV navigation + stereo vision for fruit detection. Motion planning with MoveIt for automated harvesting & sorting.</p>
+					</article>
+
+					<!-- LiDAR Avoidance -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/lidar/index.html" class="image fit thumb">
+							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/lidar.mp4" type="video/mp4">
+							</video>
+						</a>
+						<h3>LiDAR-Based Dynamic Obstacle Avoidance</h3>
+						<p>Integrated 3D SLAM, AMCL & LiDAR-based human detection with A* + TEB planners. Won 1st place at IITI Summer of Code.</p>
+					</article>
+
+					<!-- Race Car -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/nxp/index.html" class="image fit thumb">
+							<img src="images/NXP.png" alt="Race track" />
+						</a>
+						<h3>Autonomous Race Car</h3>
+						<p>Deployed high-speed real-time planning and control algorithms in ROS 2/Gazebo for an autonomous racecar navigating dynamic traffic, elevation and realistic obstacle scenarios. Secured rank 2 out of 950+ teams and received the Best Coding Award.
+</p>
+					</article>
+
+					<!-- Makerspace -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/makerspace/index.html" class="image fit thumb">
+							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/makerspace.mp4" type="video/mp4">
+							</video>
+						</a>
+						<h3>Makerspace Lab, IIT Indore (TA & UG Coordinator)</h3>
+						<p>Led hardware fabrication (PCB, CNC, laser cutting). Built autonomous solar-powered seed-sowing robot with embedded sensors. Mentored 200+ students in robotics, CV, CAD/CAM; established Tinkerer’s Lab course.</p>
+					</article>
+
+					<!-- Hybrid Wind Turbine -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/wind/index.html" class="image fit thumb">
+							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/VAWT.mp4" type="video/mp4">
+							</video>
+						</a>
+						<h3>Hybrid Vertical Axis Wind Turbine (Mechatronics Course Project)</h3>
+						<p>
+							Designed and fabricated a VAWT combining Darrieus and Savonnius rotors with an auto-alignment blade control algorithm for maximum torque. Used CFD (Ansys Fluent) to analyze performance, validate design, and optimize energy capture.
+						</p>
+					</article>
+
+					<!-- PUMA 560 -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/puma/index.html" class="image fit thumb">
+							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/puma.mp4" type="video/mp4">
+							</video>
+						</a>
+						<h3>Fabrication, Simulation & Analysis of PUMA 560 Robot Arm</h3>
+						<p>
+							Developed PLA-based replica of PUMA560 robot arm. Conducted endurance, failure & torque analysis using Ansys Fluent. 
+							Simulated kinematics in Webots with a factory demo environment.
+						</p>
+					</article>
+
+					<!-- FEM Project -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/FEM/index.html" class="image fit thumb">
+							<img src="images/FEM.png" alt="Finite Element Method" />
+						</a>
+						<h3>FEM Project - Structural Behavior of Multi-Story Building Beams</h3>
+						<p>
+							Implemented a custom 3D frame-element FEA tool (mesh generator, stiffness assembly) and validated displacements/stresses against Fusion 360 with an interactive post-processor for deformation, stress and factor of safety visualization.
+						</p>
+					</article>
+
+					<!-- Multi-robot -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/multirobot/index.html" class="image fit thumb">
+							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/multi_robot.mp4" type="video/mp4">
+							</video>
+						</a>
+						<h3>Multi-Robot Coordination</h3>
+						<p>
+							Developed strategies for collaborative multi-robot systems. 
+							Focused on coordination, localization, and dynamic trajectory planning.
+						</p>
+					</article>
+
+					<!-- CV OCT -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/cv_oct/index.html" class="image fit thumb">
+							<img src="images/CV.png" alt="Retinal OCT"/>
+						</a>
+						<h3>Computer Vision OCT Project</h3>
+						<p>
+							Designed an OCT classification pipeline using contour, texture, HOG, and Fourier features with dimensionality reduction and classical ML models like SVM and XGBoost. Achieved ~90.9% accuracy on test data while ensuring efficiency and interpretability compared to deep learning baselines.
+						</p>
+					</article>
+
+					<!-- Moving Target -->
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="projects/moving_target/index.html" class="image fit thumb">
+							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/moving_target.mp4" type="video/mp4">
+							</video>
+						</a>
+						<h3>Motion Planning</h3>
+						<p>
+							[Ongoing]
+						</p>
+					</article>
+
+
+				</div>
+			</section>
+
+			<!-- Academic -->
+<!-- Academic -->
+<section id="academic-history">
+	<h2>Academic History</h2>
+
+	<section>
+		<header>
+			<h5>Carnegie Mellon University</h5>
+			<p>Aug 2025 - May 2027 | Pittsburgh, PA, USA</p>
+		</header>
+		<p>
+			<span class="image left"><img src="images/logos/CMU_logo.png" alt="CMU Logo" /></span>
+			Pursuing <strong>M.S. in Robotic Systems Development</strong>.<br />
+			Coursework: Planning for Robotics, Robot Mobility, Manipulation Estimation & Control, Systems Engineering.
+		</p>
+		<p>     </p>
+	</section>
+
+	<hr />
+
+	<section>
+		<header>
+			<h5>Indian Institute of Technology Indore (IIT Indore)</h5>
+			<p>Nov 2021 – July 2025 | Indore, India</p>
+		</header>
+		<p>
+			<span class="image left"><img src="images/logos/IITI_logo.png" alt="IIT Indore Logo" /></span>
+			<strong>B.Tech in Mechanical Engineering</strong> | GPA: 8.31/10<br />
+			Coursework: Computer Vision, Spacecraft Attitude Dynamics, Control & Pointing, Kinematics & Dynamics of Machines.
+		</p>
+	</section>
+</section>
+
+
+			<!-- External Media -->
+			<!-- <section id="media">
+				<h2>External Media</h2>
+				<p>Appearances in newspapers, interviews, and online media will be listed here.</p>
+				<ul>
+					<li><a href="#">Example Press Link 1</a></li>
+					<li><a href="#">Example Press Link 2</a></li>
+				</ul>
+			</section> -->
+<section id="contact">
+  <h2>Get In Touch</h2>
+  <div class="row">
+    <div class="col-12">
+      <ul class="labeled-icons">
+                <li>
+          <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+          +1 412-475-4105
+        </li>
+        <li>
+          <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+          <a href="mailto:akshitr@andrew.cmu.edu">akshitr@andrew.cmu.edu</a>
+        </li>
+		<li>
+          <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+          Pittsburgh, PA<br />
+          United States
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+		</div>
+
+		<!-- Footer (Get in Touch stays same) -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://github.com/AkshitRaizada" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li><a href="https://linkedin.com/in/akshit-raizada" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto:akshitr@andrew.cmu.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Akshit Raizada</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
