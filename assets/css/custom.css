@@ -1,0 +1,316 @@
+/* Additions on top of the Strata theme (main.css). */
+
+/* Small meta line under a card title (dates, course codes) */
+.meta {
+	color: #a2a2a2;
+	display: block;
+	font-size: 0.85rem;
+	margin: -0.6em 0 0.8em 0;
+}
+
+/* Key results under a project */
+ul.results {
+	font-size: 0.8em;
+	line-height: 1.5em;
+	margin: 0.75em 0 1.5em 0;
+}
+
+	ul.results li {
+		padding-left: 0.1em;
+	}
+
+/* Diagrams keep their full frame instead of being cropped to 4:3 */
+.work-item img.diagram {
+	background: #f6f8fa;
+	object-fit: contain;
+}
+
+/* Organization logo beside an experience heading */
+h3.org {
+	align-items: center;
+	display: flex;
+	gap: 0.6em;
+}
+
+	h3.org img,
+	.work-item h3.org img {
+		border-radius: 0;
+		flex: none;
+		height: 2em;
+		width: 2em;
+		object-fit: contain;
+	}
+
+/* Small brand icon in front of a link (arXiv, GitHub) */
+a.ext img,
+a.ext .icon,
+.work-item a.ext img {
+	border-radius: 0;
+	display: inline;
+	height: 0.95em;
+	width: auto;
+	margin-right: 0.25em;
+	vertical-align: -0.1em;
+}
+
+/* Wide clips with baked-in labels: show the whole frame instead of cropping to 4:3 */
+.work-item video.letterbox {
+	background: #111;
+	object-fit: contain;
+}
+
+
+/* Pair of supporting clips under a featured project */
+.sub-media {
+	display: grid;
+	gap: 0.9em;
+	grid-template-columns: 1fr 1fr;
+	margin: 0 0 2em 0;
+}
+
+	.sub-media figure {
+		margin: 0;
+	}
+
+	.sub-media video {
+		aspect-ratio: 16 / 9;
+		background: #111;
+		border-radius: 8px;
+		display: block;
+		object-fit: contain;
+		width: 100%;
+	}
+
+	.sub-media figcaption {
+		color: #8c8c8c;
+		font-size: 0.8rem;
+		line-height: 1.4;
+		margin-top: 0.4em;
+	}
+
+ul.actions.small {
+	margin-bottom: 2.5em;
+}
+
+/* Cards on the More Projects page keep the clip's own framing */
+.more .col-6.work-item video,
+.more .col-6.work-item img,
+.more .col-4.work-item video,
+.more .col-4.work-item img {
+	aspect-ratio: 16 / 10;
+	background: #111;
+	max-height: none;
+	object-fit: contain;
+}
+
+.more h2.group {
+	margin-top: 0.5em;
+}
+
+@media screen and (max-width: 736px) {
+	.sub-media {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Home-page project grid: keep 16:9 clips whole instead of a 200px-tall 4:3 crop */
+#projects .work-item video,
+#projects .work-item img {
+	aspect-ratio: 16 / 9;
+	max-height: none;
+}
+
+/* Full-width collages on the More Projects page keep their own aspect ratio */
+.more .col-12.work-item video,
+.more .col-12.work-item img {
+	aspect-ratio: auto;
+	max-height: none;
+}
+
+/* Wide multi-panel recordings: show the full frame at its own aspect ratio */
+.work-item video.whole {
+	aspect-ratio: auto;
+	max-height: none;
+}
+
+/* Links under a card's description (GitHub, arXiv, Drive, ...) */
+ul.links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4em 1.4em;
+	font-size: 0.8em;
+	list-style: none;
+	margin: 0.9em 0 0 0;
+	padding: 0;
+}
+
+	ul.links li {
+		padding: 0;
+	}
+
+	ul.links a {
+		align-items: center;
+		border-bottom: 0;
+		display: inline-flex;
+		gap: 0.45em;
+		white-space: nowrap;
+	}
+
+	ul.links a:hover {
+		text-decoration: underline;
+	}
+
+	ul.links .icon,
+	.work-item ul.links img {
+		aspect-ratio: auto;
+		border-radius: 0;
+		display: inline-block;
+		font-size: 1.15em;
+		height: 1.15em;
+		width: auto;
+	}
+
+	/* Font Awesome glyphs inherit the paragraph line-height and sit low; centre them on the text */
+	ul.links .icon,
+	ul.links .icon:before {
+		line-height: 1;
+	}
+
+	ul.links .icon {
+		height: auto;
+		position: relative;
+		top: 0.15em;
+	}
+
+/* Card media opens in the viewer below */
+.work-item .image.fit {
+	cursor: zoom-in;
+}
+
+	.work-item .image.thumb:after {
+		content: 'Enlarge';
+	}
+
+/* Media viewer */
+.lightbox-overlay {
+	align-items: center;
+	background: rgba(30, 30, 32, 0.72);
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	opacity: 0;
+	padding: 3em 2em;
+	position: fixed;
+	transition: opacity 0.2s ease, visibility 0s linear 0.2s;
+	visibility: hidden;
+	z-index: 10000;
+	cursor: zoom-out;
+}
+
+	.lightbox-overlay.visible {
+		opacity: 1;
+		transition: opacity 0.2s ease;
+		visibility: visible;
+	}
+
+	.lightbox-figure {
+		margin: 0;
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.lightbox-media {
+		cursor: auto;
+		display: inline-block;
+	}
+
+	.lightbox-media video,
+	.lightbox-media img {
+		--ar: 1.7778;
+		background: #111;
+		border-radius: 6px;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+		display: block;
+		height: auto;
+		max-width: 100%;
+		width: min(94vw - 4em, (100vh - 9em) * var(--ar), 1800px);
+	}
+
+	.lightbox-figure figcaption {
+		color: #ddd;
+		font-size: 0.85em;
+		margin-top: 0.8em;
+	}
+
+	.lightbox-close {
+		background: none;
+		border: 0;
+		box-shadow: none;
+		color: #fff;
+		cursor: pointer;
+		font-size: 2.2em;
+		height: auto;
+		line-height: 1;
+		opacity: 0.75;
+		padding: 0.2em 0.45em;
+		position: absolute;
+		right: 0.3em;
+		top: 0.2em;
+	}
+
+		.lightbox-close:hover {
+			background: none;
+			color: #fff;
+			opacity: 1;
+		}
+
+html.lightbox-open,
+html.lightbox-open body {
+	overflow: hidden;
+}
+
+@media screen and (max-width: 736px) {
+	.lightbox-overlay {
+		padding: 3em 0.5em;
+	}
+
+	.lightbox-media video,
+	.lightbox-media img {
+		width: min(100vw - 1em, (100vh - 9em) * var(--ar));
+	}
+}
+
+/* Projects listed under a collage card */
+.work-item ul.items {
+	font-size: 0.8em;
+	line-height: 1.5em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+	.work-item ul.items li {
+		margin: 0 0 0.9em 0;
+		padding: 0;
+	}
+
+/* Three-column undergraduate grid: smaller titles */
+.more .col-4.work-item h3 {
+	font-size: 0.9em;
+}
+
+/* Resume-style bullet points on cards */
+.work-item ul.points {
+	margin: 0 0 1.25em 0;
+	padding-left: 1.1em;
+}
+
+	.work-item ul.points li {
+		margin: 0 0 0.4em 0;
+		padding-left: 0.25em;
+	}
+
+/* Home page project cards: slightly smaller text than the experience cards */
+#projects .work-item ul.points {
+	font-size: 0.93em;
+}

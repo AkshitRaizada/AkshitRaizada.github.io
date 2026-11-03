@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script async src="https://www.googletagmanager.com"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-1QLW85CK11');
+		</script>
+		<title>More Projects · Akshit Raizada</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="CMU course projects, generative models and undergraduate work by Akshit Raizada, MS Robotics student at Carnegie Mellon." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://akshitraizada.github.io/projects.html" />
+		<meta property="og:title" content="More Projects · Akshit Raizada" />
+		<meta property="og:description" content="CMU course projects, generative models and undergraduate work by Akshit Raizada, MS Robotics student at Carnegie Mellon." />
+		<meta property="og:image" content="https://akshitraizada.github.io/images/avatar.jpg" />
+		<meta name="twitter:card" content="summary" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<style>
+			.work-item p {font-size:0.95rem;}
+		</style>
+	</head>
+	<body class="is-preload more">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+				<h1><strong>Akshit Raizada's Portfolio</strong></h1>
+				<h3>Pursuing MS in Robotic Systems Development at Carnegie Mellon University</h3>
+			</div>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+
+			<section id="intro">
+				<h2>More Projects</h2>
+				<p><a href="index.html">&larr; Back to main page</a></p>
+			</section>
+
+			<!-- CMU course projects -->
+			<section id="cmu">
+				<h2 class="group">CMU Course Projects</h2>
+				<div class="row">
+
+					<article class="col-12 work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/cmu/slam_collage.mp4" type="video/mp4">
+							</video>
+						</span>
+						<h3><b>SLAM &amp; Robot Learning</b></h3>
+						<ul class="items">
+							<li><strong>Franka Panda Ball-Balancing via Deep RL</strong> &ndash; Engineered a shaped reward (exponential centering, velocity/jerk and termination penalties) with aggressive domain randomization (mass, friction, latency, sensor noise), holding 95% success under real-world-calibrated perturbations; deployed on real hardware.</li>
+							<li><strong>Model-Based RL with PETS</strong> &ndash; Probabilistic ensemble dynamics with CEM + MPC on a 2D pushing task, reaching 100% success within 100 PETS iterations vs. 62% for a single network trained on 1,000 random episodes.</li>
+							<li><strong>Dense RGB-D SLAM</strong> &ndash; Point-to-plane ICP and point-based map fusion on ICL-NUIM.</li>
+							<li><strong>Monte Carlo Localization</strong> &ndash; Localized a lost robot in Wean Hall from odometry and laser alone with 20,000 particles, including kidnapped-robot recovery.</li>
+						</ul>
+					</article>
+
+					<article class="col-12 work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/cmu/planning_collage.mp4" type="video/mp4">
+							</video>
+						</span>
+						<h3><b>Manipulation, Planning &amp; Control</b></h3>
+						<ul class="items">
+							<li><strong>Humanoid Walking with LIPM</strong> &ndash; Standing, push-recovery and walking controllers for a simulated humanoid with CoM/ZMP-based stabilization.</li>
+							<li><strong>RRT with Shortcutting on a 7-DoF Franka</strong> &ndash; Joint-space RRT with OBB collision checking, followed by path shortcutting.</li>
+							<li><strong>Force vs. Impedance Control</strong> &ndash; Pressing 15 N against an oscillating whiteboard: force control holds the target, while the impedance controller&rsquo;s force swings with the board.</li>
+							<li><strong>Quadrotor Control</strong> &ndash; Differential-flatness trajectory generation with cascaded PD/LQR and nonlinear adaptive control for spiral and figure-8 tracking.</li>
+							<li><strong>Sampling-Based Planners in C++</strong> &ndash; RRT, RRT-Connect, PRM and RRT* for a high-DoF planar arm, benchmarked for convergence rate and solution quality.</li>
+							<li><strong>Vehicle Models &amp; Path Tracking</strong> &ndash; Kinematic and dynamic bicycle, Ackermann, skid-steer and articulated vehicle models with feedback path tracking.</li>
+							<li><strong>Real-Time Target-Catching Planner</strong> &ndash; Weighted backward A* in (x, y, t) with a backward-Dijkstra heuristic, replanning in under a second to intercept a moving target.</li>
+						</ul>
+					</article>
+
+				</div>
+			</section>
+
+			<!-- Generative -->
+			<section id="genai">
+				<h2 class="group">Generative Models</h2>
+				<div class="row">
+
+					<article class="col-6 col-12-xsmall work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/cmu/ddpm_cats.mp4" type="video/mp4">
+							</video>
+						</span>
+						<h3><b>Denoising Diffusion from Scratch</b></h3>
+						<p>Implemented the DDPM forward/reverse diffusion process and U-Net from scratch, then retrained at 64×64 on AFHQ cats (40k steps, EMA weights).</p>
+					</article>
+
+					<article class="col-6 col-12-xsmall work-item">
+						<h3><b>LoRA &amp; On-Policy Distillation for Tool Calling</b></h3>
+						<ul class="points">
+							<li>Implemented LoRA from scratch on Qwen2.5-0.5B-Instruct to emit JSON function calls (xLAM data with abstention examples).</li>
+							<li>Exact match went from 36.1% to 48.5% after one SFT epoch. More SFT plateaued at 48.6%, while on-policy distillation from a larger teacher reached 52.6%.</li>
+							<li>Also built RoPE and grouped-query attention into a GPT; three KV heads cut attention memory from 3.84 MB to 3.09 MB.</li>
+						</ul>
+					</article>
+
+				</div>
+			</section>
+
+			<!-- Undergrad -->
+			<section id="undergrad">
+				<h2 class="group">Undergraduate Projects</h2>
+				<div class="row">
+
+					<article class="col-4 col-6-small col-12-xsmall work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/simulation.mp4" type="video/mp4">
+							</video>
+						</span>
+						<h3><b>Greenhouse Harvesting Robot</b></h3>
+						<span class="meta">IIT Bombay e-Yantra Robotics Challenge</span>
+						<p>Time-efficient fruit-harvesting algorithms with ArUco landmark navigation to plants, 3D fruit localization from camera data, and MoveIt arm planning to pluck fruit into a basket.</p>
+						<ul class="links">
+							<li><a href="https://github.com/AkshitRaizada/eYRC-KrishiBot" target="_blank" rel="noopener"><span class="icon brands fa-github"></span>GitHub</a></li>
+						</ul>
+					</article>
+
+					<article class="col-4 col-6-small col-12-xsmall work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/fem_towers.mp4" type="video/mp4">
+							</video>
+						</span>
+						<h3><b>3D Frame FEA of a Multi-Story Tower</b></h3>
+						<span class="meta">Finite Element Methods course project</span>
+						<p>Implemented a custom 3D frame-element FEA tool (mesh generator, stiffness assembly) and validated displacements/stresses against Fusion 360 with an interactive post-processor for deformation, stress and factor of safety visualization.</p>
+					</article>
+
+
+					<article class="col-4 col-6-small col-12-xsmall work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/puma.mp4" type="video/mp4">
+							</video>
+						</span>
+						<h3><b>PUMA 560 Replica: Fabrication &amp; Simulation</b></h3>
+						<p>Designed and 3D-printed a PLA replica of the PUMA 560, validated with hand calculations and COMSOL/Ansys FEA for torque, stress and deflection, plus FK/IK in a Webots factory demo.</p>
+						<ul class="links">
+							<li><a href="https://drive.google.com/file/d/1RPnXHniV2bNa38n57AGOyO2SVcyQpyx_/view?usp=sharing" target="_blank" rel="noopener"><span class="icon brands fa-google-drive"></span>Google Drive</a></li>
+						</ul>
+					</article>
+
+					<article class="col-4 col-6-small col-12-xsmall work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/multi_robot.mp4" type="video/mp4">
+							</video>
+						</span>
+						<h3><b>Multi-Robot Coordination</b></h3>
+						<p>Coordination, localization and dynamic trajectory planning for a team of collaborating mobile robots.</p>
+					</article>
+
+					<article class="col-4 col-6-small col-12-xsmall work-item">
+						<span class="image fit thumb">
+							<img src="images/CV.png" alt="Retinal OCT classes with extracted features"/>
+						</span>
+						<h3><b>Retinal OCT Pathology Classification</b></h3>
+						<span class="meta">Computer Vision course project</span>
+						<p>Interpretable pipeline of contour, texture, HOG and FFT features with SVM/XGBoost, reaching ~90.9% test accuracy while prioritizing efficiency and explainability.</p>
+						<ul class="links">
+							<li><a href="https://drive.google.com/file/d/1iH_I1AtgUBhbvSc0AEINk7imeVho6eWI/view?usp=sharing" target="_blank" rel="noopener"><span class="icon brands fa-google-drive"></span>Google Drive</a></li>
+						</ul>
+					</article>
+
+
+					<article class="col-4 col-6-small col-12-xsmall work-item">
+						<span class="image fit thumb">
+							<img src="images/CO2.png" alt="CO2 monitoring and license plate recognition" />
+						</span>
+						<h3><b>CO₂ Monitoring &amp; ALPR</b></h3>
+						<span class="meta">Chanakya UG Fellowship Grant 2023 · patent in process</span>
+						<p>YOLOv9 + Tesseract license-plate recognition trained on a custom Indian plate dataset and running on a Raspberry Pi, paired with a through-beam IR CO₂ sensor and cloud logging to flag high emitters.</p>
+						<ul class="links">
+							<li><a href="https://drive.google.com/file/d/1Yglb4eFA787Vi9uK2ZICcCb-wesEdgjm/view?usp=sharing" target="_blank" rel="noopener"><span class="icon brands fa-google-drive"></span>Google Drive</a></li>
+						</ul>
+					</article>
+
+				</div>
+			</section>
+
+			<!-- Leadership -->
+			<section id="leadership">
+				<h2 class="group">Leadership &amp; Teaching</h2>
+				<div class="row">
+					<article class="col-12 work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/makerspace.mp4" type="video/mp4">
+							</video>
+						</span>
+						<h3><b>Makerspace Lab, IIT Indore (TA &amp; UG Coordinator)</b></h3>
+						<span class="meta">June 2023 – Apr 2024</span>
+						<ul class="points">
+							<li>Completed an intensive hardware fabrication program (PCB milling, laser cutting, CNC milling/lathe) and led development of an autonomous solar-powered seed-sowing robot with soil-quality and crop-monitoring sensors.</li>
+							<li>Mentored 200+ first-year students in robotics, drone tech, computer vision and CAD/CAM, and helped establish the Tinkerer&rsquo;s Lab and the Makerspace Lab course.</li>
+						</ul>
+						<ul class="links">
+							<li><a href="https://makerspace.iiti.ac.in/" target="_blank" rel="noopener"><span class="icon solid fa-globe"></span>Website</a></li>
+						</ul>
+					</article>
+				</div>
+				<ul>
+					<li>President, Robotics Club, IIT Indore (2023 – 2024)</li>
+					<li>Co-Founder and Treasurer, IEEE Robotics and Automation Society Student Chapter, IIT Indore (2022 – 2024)</li>
+					<li>Founding Board Member, Tinkerer's Lab, IIT Indore (2023 – 2024)</li>
+					<li>Domain Lead, Intelligent Vehicles &amp; Robotics, IITI Summer of Code '23 (with MathWorks); a mentored project won the MathWorks Excellence in Innovation award</li>
+				</ul>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://github.com/AkshitRaizada" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li><a href="https://linkedin.com/in/akshit-raizada" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto:akshitr@andrew.cmu.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Akshit Raizada</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/lightbox.js"></script>
+		<script src="assets/js/lazyvideo.js"></script>
+	</body>
+</html>

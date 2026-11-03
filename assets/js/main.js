@@ -72,18 +72,42 @@
 
 				breakpoints.on('<=medium', function() {
 
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
+					$window.off('scroll.strata_parallax resize.strata_parallax');
+					$header.css({ 'background-position': '', 'background-size': '' });
 
 				});
 
+				// Scale the photo to cover the sidebar and pan it in proportion to
+				// scroll progress, so it never runs out on a long page.
+					var bg = { w: 3000, h: 3857 },
+						bgImg = new Image();
+
+					bgImg.onload = function() {
+						bg.w = bgImg.naturalWidth;
+						bg.h = bgImg.naturalHeight;
+						$window.triggerHandler('scroll');
+					};
+					bgImg.src = 'images/bg.jpg';
+
+					var parallax = function() {
+						var hw = $header.outerWidth(), hh = $header.outerHeight(),
+							w = hw * 1.5, h = w * bg.h / bg.w;
+
+						if (h < hh * 1.15) { h = hh * 1.15; w = h * bg.w / bg.h; }
+
+						var max = $(document).height() - $window.height(),
+							p = max > 0 ? Math.min(1, Math.max(0, $window.scrollTop() / max)) : 0;
+
+						$header.css({
+							'background-size': 'auto, ' + w + 'px ' + h + 'px',
+							'background-position': 'left top, left ' + (-p * (h - hh)) + 'px'
+						});
+					};
+
 				breakpoints.on('>medium', function() {
 
-					$header.css('background-position', 'left 0px');
-
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
+					$window.on('scroll.strata_parallax resize.strata_parallax', parallax);
+					parallax();
 
 				});
 

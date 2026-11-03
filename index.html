@@ -6,20 +6,21 @@
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
-		
+
 		  gtag('config', 'G-1QLW85CK11');
 		</script>
 		<title>Akshit Raizada's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Akshit Raizada, MS in Robotic Systems Development at Carnegie Mellon. Robot learning, manipulation, SLAM and perception projects." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://akshitraizada.github.io/" />
+		<meta property="og:title" content="Akshit Raizada's Portfolio" />
+		<meta property="og:description" content="Akshit Raizada, MS in Robotic Systems Development at Carnegie Mellon. Robot learning, manipulation, SLAM and perception projects." />
+		<meta property="og:image" content="https://akshitraizada.github.io/images/avatar.jpg" />
+		<meta name="twitter:card" content="summary" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			.work-item p {font-size:0.95rem;}
-			.header-sub {font-weight:600; font-size:1rem; opacity:0.9;}
-			.section-title {margin-bottom:0.75rem}
-			.tag {display:inline-block;padding:4px 8px;border-radius:12px;background:#eef; margin:2px;font-size:0.85rem}
-			.role img.logo {height:24px; vertical-align:middle; margin-right:8px;}
-		</style>
+		<link rel="stylesheet" href="assets/css/custom.css" />
 	</head>
 	<body class="is-preload">
 
@@ -35,294 +36,279 @@
 		<!-- Main -->
 		<div id="main">
 			<section id="about">
-  <h2>About Me</h2>
-  <p>I'm Akshit Raizada, currently pursuing my Master's in Robotic Systems Development at Carnegie Mellon University. I completed my B.Tech in Mechanical Engineering at IIT Indore, where I developed a strong foundation in robotics, automation and AI.
-</p>
-<p>Over the past few years, I've worked on projects spanning autonomous vehicles, multi-robot systems, computer vision and off-road navigation. I enjoy bridging research with real-world deployment, from perception stacks and sensor fusion pipelines to autonomous control and hardware integration.
-</p>
-<p>I'm always excited to connect with people whether it's for collaboration, research or just sharing ideas.
- </p> 
-  <ul class="actions">
-    <li>
-      <a href="https://drive.google.com/file/d/1FN7C5DjUQV-DdZx2v-wv1OXsnxplOKSS/view?usp=sharing" 
-         target="_blank" 
-         class="button">
-        View Resume
-      </a>
-    </li>
-  </ul>
-</section>
+				<h2>About Me</h2>
+				<p>I'm Akshit Raizada, a Master's student in Robotic Systems Development at Carnegie Mellon University. I completed my B.Tech in Mechanical Engineering at IIT Indore, where I developed a strong foundation in robotics, automation and AI.</p>
+				<p>My work spans robot learning, manipulation, SLAM and perception. This summer I was a Robotics Engineer Intern at Noble Machines, building VLA benchmarking and data pipelines for a humanoid robot. My MRSD capstone is ORIO, a dual-arm robot that organizes operating-room inventory with UPMC. I enjoy bridging research with real-world deployment, from perception stacks and state estimation to learned policies running on hardware.</p>
+				<p>I'm always excited to connect with people whether it's for collaboration, research or just sharing ideas.</p>
+				<ul class="actions">
+					<li><a href="https://drive.google.com/file/d/1FN7C5DjUQV-DdZx2v-wv1OXsnxplOKSS/view?usp=sharing" target="_blank" class="button">View Resume</a></li>
+				</ul>
+			</section>
+
+			<!-- Experience -->
+			<section id="experience">
+				<h2>Experience</h2>
+				<div class="row">
+
+					<article class="col-12 work-item">
+						<span class="image fit thumb"><img src="images/noble-carrying-pipe.avif" alt="Noble Machines humanoid carrying a pipe" /></span>
+						<h3 class="org"><img src="images/logos/noble.svg" alt="" /><b>Noble Machines (Robotics Engineer Intern)</b></h3>
+						<span class="meta">May 2026 – Aug 2026</span>
+						<ul class="points">
+							<li>Built a VR-teleop-to-MimicGen pipeline that multiplies a handful of demonstrations into hundreds of training trajectories, then post-trained VLA and world-model checkpoints on a custom humanoid and deployed the policies on physical hardware.</li>
+							<li>Engineered a plug-and-play VLA benchmarking harness whose modular plugin interface makes new models and evaluation environments swappable without touching the core pipeline.</li>
+							<li>Owned the full real-to-sim development process, validating that in-simulation success rates tracked real-world outcomes.</li>
+						</ul>
+					</article>
+
+					<article class="col-12 work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/IRisPath_Preview.mp4" type="video/mp4">
+							</video>
+						</span>
+						<h3 class="org"><img src="images/logos/iisc.svg" alt="" /><b>Artificial Intelligence &amp; Robotics Lab, IISc (Research Intern)</b></h3>
+						<span class="meta">May 2024 – Sep 2024</span>
+						<ul class="points">
+							<li>Designed a self-supervised, real-time off-road perception model fusing thermal, RGB and velocity data into traversability costmaps that stay reliable from day into night, learned with no manual labels.</li>
+							<li>Curated and open-sourced the first off-road dataset to pair calibrated thermal and RGB imagery with a full multi-LiDAR, IMU and GNSS suite, released in KITTI and NuScenes formats.</li>
+							<li>Benchmarked continual test-time-adaptation methods on synthetic fog, rain and snow, cutting worst-case costmap error by ~33% over the source model.</li>
+						</ul>
+						<ul class="links">
+							<li><a href="https://arxiv.org/abs/2412.03173" target="_blank" rel="noopener"><img src="images/logos/arxiv.svg" alt="" />arXiv</a></li>
+						</ul>
+					</article>
+
+					<article class="col-12 work-item">
+						<span class="image fit thumb">
+							<video class="whole" muted loop playsinline preload="metadata" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/out-3.mp4" type="video/mp4">
+							</video>
+						</span>
+						<h3><b>AutoMind Dynamics (Project Intern)</b></h3>
+						<span class="meta">Oct 2024 – Nov 2024</span>
+						<ul class="points">
+							<li>Integrated BEVFusion, a multi-sensor (LiDAR-camera-radar) 3D object-detection network, into ROS for real-time detection from live sensor streams on a ground robot.</li>
+							<li>Packaged the ROS-integrated stack as a Dockerized, one-command-deployable codebase and shipped it to an external customer, running on their robot&rsquo;s compute-constrained hardware.</li>
+						</ul>
+						<ul class="links">
+							<li><a href="https://github.com/AkshitRaizada/bevfusion-ros" target="_blank" rel="noopener"><span class="icon brands fa-github"></span>GitHub</a></li>
+						</ul>
+					</article>
+
+				</div>
+			</section>
 
 			<!-- Projects -->
 			<section id="projects">
 				<h2>Projects</h2>
 				<div class="row">
 
-					<!-- IISc -->
-					<article class="col-12 work-item">
-						<a href="https://arxiv.org/abs/2412.03173" class="image fit thumb">
-							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
-								<source src="videos/IRisPath_Preview.mp4" type="video/mp4">
+					<article class="col-6 col-12-xsmall work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/cmu/orio_loop.mp4" type="video/mp4">
 							</video>
-						</a>
-						<h3><b>Artificial Intelligence & Robotics Lab, IISc (Research Intern)</b></h3>
-						<p>
-						Designed a self-supervised, real-time off-road motion planning system that learns traversability costmaps by fusing RGB, IR and vehicle velocity using image processing, homographic projection and Fourier features, eliminating manual labeling. Curated and released a large-scale multi-modal off-road dataset (multi-LiDAR, RGB, NIR, SLAM, odometry) across diverse terrain and conditions. Built a deployable perception stack benchmarked against SOTA semantic segmentation with domain adaptation for robustness across platforms and environments.
-						</p>
-
+						</span>
+						<h3><b>ORIO: Operating Room Inventory Organization (MRSD Capstone)</b></h3>
+						<span class="meta">UPMC &amp; Carnegie Mellon · Dec 2025 – present</span>
+						<ul class="points">
+							<li>Building a dual-arm Franka robot with custom suction grippers that autonomously picks and labels operating-room inventory and keeps the hospital&rsquo;s inventory database current.</li>
+							<li>Built the perception-to-grasp pipeline: open-vocabulary detection and segmentation (Grounding DINO + SAM), PRM motion planning validated in a MuJoCo twin, and learning-based DexNet grasping for clutter.</li>
+							<li>Built the SQL-backed RFID tracking subsystem on a custom low-level Impinj driver, with expiry alerts for staff.</li>
+						</ul>
+						<ul class="results">
+							<li><b>94%</b> detection accuracy</li>
+							<li><b>95.7%</b> grasp reliability</li>
+							<li><b>&gt;90%</b> labels applied</li>
+							<li><b>80+</b> items tracked</li>
+						</ul>
+						<ul class="links">
+							<li><a href="https://github.com/TeamG-ORIO" target="_blank" rel="noopener"><span class="icon brands fa-github"></span>GitHub</a></li>
+							<li><a href="videos/cmu/orio_full.mp4" class="lightbox"><span class="icon solid fa-play"></span>Full system video</a></li>
+						</ul>
 					</article>
-					
-					<!-- AutoMind -->
-					<article class="col-12 work-item">
-						<a href="https://github.com/AkshitRaizada/bevfusion-ros" class="image fit thumb">
-							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
-								<source src="videos/out-3.mp4" type="video/mp4">
+
+					<article class="col-6 col-12-xsmall work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/cmu/soccer_match.mp4" type="video/mp4">
 							</video>
-						</a>
-						<h3><b>AutoMind Dynamics (Project Intern)</b></h3>
-						<p>
-						Designed and deployed a modular ROS-compatible Bird's Eye View perception framework for real-time 3D object detection via LiDAR-camera-radar fusion on compute-constrained hardware. Delivered a fully Dockerized, production-ready system integrated with Bharat Electronics Ltd.'s robotics stack, enabling downstream calibration, state estimation and navigation in real-world deployments.
-						</p>
+						</span>
+						<h3><b>Humanoid Soccer: Unitree G1s Learning 3v3 with Deep RL</b></h3>
+						<span class="meta">Deep RL project · Sep 2026 – present</span>
+						<ul class="points">
+							<li>Built a hierarchical deep-RL system where simulated Unitree G1 humanoids play 3v3 soccer, running in batched GPU MuJoCo at ~26k environment steps per second.</li>
+							<li>Trained five low-level skills (run, get-up, dribble, strike, receive) with SAC and PPO on recorded hand-over states, so the robots switch reliably between them.</li>
+							<li>Trained a high-level PPO team policy that picks a skill and target for each robot at 5 Hz, using self-play against a pool of past selves and scripted opponents.</li>
+						</ul>
+						<ul class="results">
+							<li><b>86%</b> wins vs. scripted coach</li>
+							<li><b>96%</b> wins vs. ball-chaser</li>
+							<li><b>99.7%</b> ball control while dribbling</li>
+							<li><b>96.5%</b> standing within 4 s of a fall</li>
+						</ul>
 					</article>
 
-					<!-- CMU Mini Projects -->
-					<article class="col-12 work-item">
-						<a href="https://drive.google.com/file/d/1mdwK58aKT661PFgOugNN1vy2KYy3GGB0/view?usp=sharing" class="image fit thumb">
-							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
-								<source src="videos/CMU_SEM_1.mp4" type="video/mp4">
+					<article class="col-6 col-12-xsmall work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/cmu/macvio.mp4" type="video/mp4">
 							</video>
-						</a>
-						<h3><b>CMU Course Projects</b></h3>
-						<ul>
-							<li>
-								<strong>Humanoid LIPM Control:</strong> Implemented standing, recovery and walking controllers for humanoids using the Linear Inverted Pendulum Model (LIPM), including CoM/ZMP-based stabilization and step planning under disturbances.
-							</li>
-
-							<li>
-								<strong>Probabilistic Localization (EKF & PF):</strong> Implemented robot localization using Extended Kalman Filters and Particle Filters, modeling nonlinear dynamics, sensor noise and resampling, compared against graph-based methods.
-							</li>
-
-							<li>
-								<strong>Real-Time Target Catching Planner:</strong> Designed a real-time(1 second) planner for a long scale(5000×5000 grid) target catching using multi-source weighted backward A* in (x, y, t), guided by a backward Dijkstra heuristic with greedy fallbacks.
-							</li>
-
-							<li>
-								<strong>Path Tracking & Vehicle Models:</strong> Implemented kinematic bicycle and differential drive models with constraint-aware trajectory planning and feedback control for accurate path tracking.
-							</li>
-
-							<li>
-								<strong>Sampling-Based Motion Planning:</strong> Implemented from scratch and compared RRT, RRT-Connect, PRM, RRT* and RRT* w/t node rejection and goal biasing, analyzing convergence and solution quality.
-							</li>
-
-							<li>
-								<strong>Combined Task and Motion Planning:</strong> Built a TAMP framework integrating symbolic task planning with geometric motion planning via hierarchical decomposition and feasibility-aware backtracking.
-							</li>
-
-							<li>
-								<strong>Drone Control & Trajectory Optimization:</strong> Developed quadrotor control and trajectory pipelines using differential flatness, polynomial trajectory generation and cascaded PID/LQR-style controllers for stable tracking.
-							</li>
-							</ul>
-
+						</span>
+						<h3><b>MAC-VIO: Learned Stereo VO + IMU Factor Graph</b></h3>
+						<span class="meta">16-833 Robot Localization &amp; Mapping · Mar – Apr 2026</span>
+						<ul class="points">
+							<li>Built a visual-inertial SLAM stack pairing a learned stereo VO frontend (MAC-VO) with a GTSAM factor-graph backend (IMU preintegration, iSAM2 smoothing), benchmarked on 10 EuRoC and TUM-VI sequences.</li>
+							<li>Built trajectory alignment/comparison and interactive visualization tooling to diagnose drift and degenerate-motion failure modes.</li>
+							<li>Traced and fixed a one-second camera/IMU timestamp misalignment in the data loaders, and wrote TUM-VI support from scratch.</li>
+						</ul>
+						<ul class="results">
+							<li><b>~30%</b> lower online ATE vs. vision-only</li>
+							<li>better on <b>9 / 10</b> EuRoC and TUM-VI sequences</li>
+						</ul>
 					</article>
 
-					<!-- ALPR -->
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="https://drive.google.com/file/d/1Yglb4eFA787Vi9uK2ZICcCb-wesEdgjm/view?usp=sharing" class="image fit thumb">
-							<img src="images/CO2.png" alt="IRisPath Project Preview" />
-						</a>
-						<h3><b>CO₂ Monitoring & ALPR</b></h3>
-						<p>Developed an ALPR system using YOLOv9 and Tesseract OCR trained on a custom Indian license plate dataset, deployed on Raspberry Pi for accurate edge inference, earning the Chanakya UG Fellowship Grant 2023. Designed a through-beam IR-based CO₂ sensor and integrated cloud logging to flag violators based on emissions
-						</p>
-					</article>
 
-					<!-- Formation Control -->
 					<article class="col-6 col-12-xsmall work-item">
-						<a href="https://github.com/IVDC-Club-IIT-Indore/DroneSwarm-InterIIT-2023" class="image fit thumb">
-							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
-								<source src="videos/Drona_Preview.mp4" type="video/mp4">
+						<span class="image fit thumb">
+							<video class="letterbox" muted loop playsinline preload="metadata" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/cmu/sem1_tamp.mp4" type="video/mp4">
 							</video>
-						</a>
-						<h3><b>Formation Control of MAVs</b></h3>
-						<p>Developed a multi-threaded Python API for controlling multiple MAVs and created a robust PID-controlled multi-agent waypoint navigation algorithm with visual position feedback from ArUco markers. We were awarded the bronze medal at the Inter IIT Tech Meet 11.0 at IIT Kanpur for this project.</p>
+						</span>
+						<h3><b>Combined Task &amp; Motion Planning</b></h3>
+						<span class="meta">16-782 Planning · Nov – Dec 2025</span>
+						<ul class="points">
+							<li>Designed a geometry-aware STRIPS planner that embeds robot motion costs (via analytical inverse kinematics) directly into A* action evaluation, solving tangram rearrangement end-to-end in ROS/Gazebo.</li>
+							<li>Implemented hierarchical geometric collision checking, cutting motion cost 26&ndash;37% with sub-second planning time.</li>
+						</ul>
 					</article>
 
-					<!-- Greenhouse -->
 					<article class="col-6 col-12-xsmall work-item">
-						<a href="https://github.com/AkshitRaizada/eYRC-KrishiBot" class="image fit thumb">
-							<img src="videos/simulation.gif" alt="Greenhouse Robot Simulation" />
-						</a>
-						<h3><b>Greenhouse Harvesting Robot</b></h3>
-						<p>LiDAR UGV navigation + stereo vision for fruit detection. Motion planning with MoveIt for automated harvesting & sorting.</p>
-					</article>
-
-					<!-- LiDAR Avoidance -->
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="https://github.com/IVDC-Club-IIT-Indore/IITISoC-22-Auto3-LiDAR-Obstacle-Avoidance-Robots" class="image fit thumb">
-							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
-								<source src="videos/lidar.mp4" type="video/mp4">
-							</video>
-						</a>
-						<h3><b>LiDAR-Based Dynamic Obstacle Avoidance</b></h3>
-						<p>Integrated 3D SLAM, AMCL & LiDAR-based human detection with A* + TEB planners. Won 1st place at IITI Summer of Code.</p>
-					</article>
-
-					<!-- Race Car -->
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="https://github.com/AkshitRaizada/NXP-AIM-Smart-Car" class="image fit thumb">
-							<img src="images/NXP.png" alt="Race track" />
-						</a>
-						<h3><b>Autonomous Race Car</b></h3>
-						<p>Deployed high-speed real-time planning and control algorithms in ROS 2/Gazebo for an autonomous racecar navigating dynamic traffic, elevation and realistic obstacle scenarios. Secured rank 2 out of 950+ teams and received the Best Coding Award.
-</p>
-					</article>
-
-					<!-- Makerspace -->
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="https://makerspace.iiti.ac.in/" class="image fit thumb">
-							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
-								<source src="videos/makerspace.mp4" type="video/mp4">
-							</video>
-						</a>
-						<h3><b>Makerspace Lab, IIT Indore (TA & UG Coordinator)</b></h3>
-						<p>Led hardware fabrication (PCB, CNC, laser cutting). Built autonomous solar-powered seed-sowing robot with embedded sensors. Mentored 200+ students in robotics, CV, CAD/CAM; established Tinkerer’s Lab course.</p>
-					</article>
-
-					<!-- Hybrid Wind Turbine -->
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="projects/wind/index.html" class="image fit thumb">
-							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
 								<source src="videos/VAWT.mp4" type="video/mp4">
 							</video>
-						</a>
-						<h3><b>Hybrid Vertical Axis Wind Turbine (Mechatronics Course Project)</b></h3>
-						<p>
-							Designed and fabricated a VAWT combining Darrieus and Savonnius rotors with an auto-alignment blade control algorithm for maximum torque. Used CFD (Ansys Fluent) to analyze performance, validate design and optimize energy capture.
-						</p>
+						</span>
+						<h3><b>Hybrid Vertical-Axis Wind Turbine</b></h3>
+						<span class="meta">Mechatronics course project</span>
+						<ul class="points">
+							<li>Designed and fabricated a hybrid vertical-axis wind turbine combining Darrieus and Savonius rotor features, with automatic blade alignment to maximize torque and energy generation.</li>
+							<li>Analysed and optimized the design with CFD in Ansys Fluent.</li>
+						</ul>
 					</article>
 
-					<!-- PUMA 560 -->
 					<article class="col-6 col-12-xsmall work-item">
-						<a href="https://drive.google.com/file/d/1RPnXHniV2bNa38n57AGOyO2SVcyQpyx_/view?usp=sharing" class="image fit thumb">
-							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
-								<source src="videos/puma.mp4" type="video/mp4">
+						<span class="image fit thumb">
+							<img src="images/NXP.png" alt="NXP AIM race track in Gazebo" />
+						</span>
+						<h3><b>Autonomous Race Car</b></h3>
+						<span class="meta">NXP AI in Mobility · Rank 2 of 950+ teams · Best Coding Award</span>
+						<ul class="points">
+							<li>Deployed high-speed real-time planning and control algorithms in ROS 2/Gazebo for an autonomous race car.</li>
+							<li>Handled dynamic traffic, elevation changes, realistic obstacles and traffic-sign compliance.</li>
+						</ul>
+						<ul class="links">
+							<li><a href="https://github.com/AkshitRaizada/NXP-AIM-Smart-Car" target="_blank" rel="noopener"><span class="icon brands fa-github"></span>GitHub</a></li>
+						</ul>
+					</article>
+
+					<article class="col-6 col-12-xsmall work-item">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/Drona_Preview.mp4" type="video/mp4">
 							</video>
-						</a>
-						<h3><b>Fabrication, Simulation & Analysis of PUMA 560 Robot Arm</b></h3>
-						<p>
-							Developed PLA-based replica of PUMA560 robot arm. Conducted endurance, failure & torque analysis using Ansys Fluent. 
-							Simulated kinematics in Webots with a factory demo environment.
-						</p>
+						</span>
+						<h3><b>Formation Control of MAVs</b></h3>
+						<span class="meta">Inter IIT Tech Meet 11.0 · Bronze medal</span>
+						<ul class="points">
+							<li>Wrote a multi-threaded Python wrapper to programmatically control a fleet of Drona Aviation&rsquo;s Pluto drones.</li>
+							<li>Implemented PID position control from ArUco-marker feedback, stable hovering and multi-agent waypoint navigation for the swarm.</li>
+						</ul>
+						<ul class="links">
+							<li><a href="https://github.com/IVDC-Club-IIT-Indore/DroneSwarm-InterIIT-2023" target="_blank" rel="noopener"><span class="icon brands fa-github"></span>GitHub</a></li>
+						</ul>
 					</article>
 
-					<!-- FEM Project -->
 					<article class="col-6 col-12-xsmall work-item">
-						<a href="projects/FEM/index.html" class="image fit thumb">
-							<img src="images/FEM.png" alt="Finite Element Method" />
-						</a>
-						<h3><b>FEM Project - Structural Behavior of Multi-Story Building Beams</b></h3>
-						<p>
-							Implemented a custom 3D frame-element FEA tool (mesh generator, stiffness assembly) and validated displacements/stresses against Fusion 360 with an interactive post-processor for deformation, stress and factor of safety visualization.
-						</p>
-					</article>
-
-					<!-- Multi-robot -->
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="projects/multirobot/index.html" class="image fit thumb">
-							<video autoplay muted loop playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
-								<source src="videos/multi_robot.mp4" type="video/mp4">
+						<span class="image fit thumb">
+							<video muted loop playsinline preload="none" disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+								<source src="videos/lidar.mp4" type="video/mp4">
 							</video>
-						</a>
-						<h3><b>Multi-Robot Coordination</b></h3>
-						<p>
-							Developed strategies for collaborative multi-robot systems. 
-							Focused on coordination, localization and dynamic trajectory planning.
-						</p>
-					</article>
-
-					<!-- CV OCT -->
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="https://drive.google.com/file/d/1iH_I1AtgUBhbvSc0AEINk7imeVho6eWI/view?usp=sharing" class="image fit thumb">
-							<img src="images/CV.png" alt="Retinal OCT"/>
-						</a>
-						<h3><b>Computer Vision OCT Project</b></h3>
-						<p>
-							Designed an OCT classification pipeline using contour, texture, HOG and Fourier features with dimensionality reduction and classical ML models like SVM and XGBoost. Achieved ~90.9% accuracy on test data while ensuring efficiency and interpretability compared to deep learning baselines.
-						</p>
+						</span>
+						<h3><b>LiDAR-Based Dynamic Obstacle Avoidance</b></h3>
+						<span class="meta">IITI Summer of Code · 1st place</span>
+						<ul class="points">
+							<li>Developed an obstacle-avoidance system combining 3D SLAM, AMCL and LiDAR-based human detection via point-cloud clustering for real-time navigation.</li>
+							<li>Integrated A* global and TEB local planners for dynamic trajectory planning among moving people.</li>
+						</ul>
+						<ul class="links">
+							<li><a href="https://github.com/IVDC-Club-IIT-Indore/IITISoC-22-Auto3-LiDAR-Obstacle-Avoidance-Robots" target="_blank" rel="noopener"><span class="icon brands fa-github"></span>GitHub</a></li>
+						</ul>
 					</article>
 
 
 				</div>
+				<ul class="actions">
+					<li><a href="projects.html" class="button">More projects &amp; coursework</a></li>
+				</ul>
 			</section>
 
 			<!-- Academic -->
-<!-- Academic -->
-<section id="academic-history">
-	<h2>Academic History</h2>
+			<section id="academic-history">
+				<h2>Academic History</h2>
+				<section>
+					<header>
+						<h5>Carnegie Mellon University</h5>
+						<p>Aug 2025 - May 2027 | Pittsburgh, PA, USA</p>
+					</header>
+					<p>
+						<span class="image left"><img src="images/logos/cmu_seal.svg" alt="Carnegie Mellon University seal" /></span>
+						Pursuing <strong>M.S. in Robotic Systems Development</strong> | GPA: 4.0/4.0<br />
+						<b>Coursework:</b> Robot Localization &amp; Mapping (A+), Robot Autonomy, Manipulation Estimation &amp; Control (A+), Robot Mobility (A+), Planning for Robotics, Systems Engineering.<br>
+						<b>Ongoing:</b> Deep Reinforcement Learning, Generative AI, MRSD Project II
+					</p>
+				</section>
+				<hr />
+				<section>
+					<header>
+						<h5>Indian Institute of Technology Indore (IIT Indore)</h5>
+						<p>Nov 2021 - July 2025 | Indore, India</p>
+					</header>
+					<p>
+						<span class="image left"><img src="images/logos/IITI_logo.png" alt="IIT Indore Logo" /></span>
+						<strong>B.Tech in Mechanical Engineering</strong> | GPA: 8.31/10<br />
+						<b>Coursework:</b> Computer Vision, Spacecraft Attitude Dynamics, Control &amp; Pointing, Kinematics &amp; Dynamics of Machines, Finite Element Methods.
+					</p>
+				</section>
+			</section>
 
-	<section>
-		<header>
-			<h5>Carnegie Mellon University</h5>
-			<p>Aug 2025 - May 2027 | Pittsburgh, PA, USA</p>
-		</header>
-		<p>
-			<span class="image left"><img src="images/logos/CMU_logo.png" alt="CMU Logo" /></span>
-			Pursuing <strong>M.S. in Robotic Systems Development</strong> | GPA: 4.17/4.0<br />
-			<b>Coursework:</b> Robot Mobility(A+), Manipulation Estimation & Control(A+), Planning for Robotics, Systems Engineering.<br>
-			<b>Ongoing:</b> Robot Autonomy, Robot Localization and Mapping, MRSD Project, Intro to Robotics Business
-		</p>
-	</section>
-
-	<hr />
-
-	<section>
-		<header>
-			<h5>Indian Institute of Technology Indore (IIT Indore)</h5>
-			<p>Nov 2021 - July 2025 | Indore, India</p>
-		</header>
-		<p>
-			<span class="image left"><img src="images/logos/IITI_logo.png" alt="IIT Indore Logo" /></span>
-			<strong>B.Tech in Mechanical Engineering</strong> | GPA: 8.31/10<br />
-			<b>Coursework:</b> Computer Vision, Spacecraft Attitude Dynamics, Control & Pointing, Kinematics & Dynamics of Machines.
-		</p>
-	</section>
-</section>
-
-
-			<!-- External Media -->
-			<!-- <section id="media">
-				<h2>External Media</h2>
-				<p>Appearances in newspapers, interviews and online media will be listed here.</p>
-				<ul>
-					<li><a href="#">Example Press Link 1</a></li>
-					<li><a href="#">Example Press Link 2</a></li>
-				</ul>
-			</section> -->
-<section id="contact">
-  <h2>Get In Touch</h2>
-  <div class="row">
-    <div class="col-12">
-      <ul class="labeled-icons">
-                <li>
-          <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-          +1 412-475-4105
-        </li>
-        <li>
-          <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-          <a href="mailto:akshitr@andrew.cmu.edu">akshitr@andrew.cmu.edu</a>
-        </li>
-		<li>
-          <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-          Pittsburgh, PA<br />
-          United States
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+			<section id="contact">
+				<h2>Get In Touch</h2>
+				<div class="row">
+					<div class="col-12">
+						<ul class="labeled-icons">
+							<li>
+								<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+								+1 412-475-4105
+							</li>
+							<li>
+								<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+								<a href="mailto:akshitr@andrew.cmu.edu">akshitr@andrew.cmu.edu</a>
+							</li>
+							<li>
+								<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+								Pittsburgh, PA<br />
+								United States
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 
 		</div>
 
-		<!-- Footer (Get in Touch stays same) -->
+		<!-- Footer -->
 		<footer id="footer">
 			<div class="inner">
 				<ul class="icons">
@@ -343,5 +329,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/lightbox.js"></script>
+		<script src="assets/js/lazyvideo.js"></script>
 	</body>
 </html>
